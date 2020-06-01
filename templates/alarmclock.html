@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+
+{% block header %}
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">目覚まし時計/Alarm Clock</h1>
+      <p class="lead">無理するなよ^^</p>
+    </div>
+  </div>
+{% endblock %}
+
+
+{% block content %}
+<div class="mx-auto" style="width: 200px;">
+    
+        <h1 id="Clock1" style="display: inline"></h1>
+            <script type="text/javascript">
+            setInterval('showClock1()',1000);
+            function showClock1() {
+            var Now = new Date();
+            var hh = set0( Now.getHours() );
+            var mm = set0( Now.getMinutes() );
+            var ss = set0( Now.getSeconds() );
+            var RTime1 = ' ' + hh + ':' + mm + ':' + ss + ' ';
+            document.getElementById("Clock1").innerHTML = RTime1;
+            }
+            function set0(num) {
+            var ret;
+            if( num < 10 ) { ret = "0" + num; }
+            else { ret = num; }
+            return ret;
+            }
+            </script>
+</div>
+
+<div class ='container'>
+    <div class="mt-5">
+        <a href="#" class="btn btn-primary btn-lg btn-block" role="button" aria-pressed="true">アラームセッッッッッッッット！！！！！！</a>
+    </div>    
+</div>
+{% endblock %}
