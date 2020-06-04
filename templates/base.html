@@ -15,6 +15,29 @@
     {% block header %}
     {% endblock header %}
 
+    <div class="mx-auto" style="width: 200px;">
+    
+      <h1 id="Clock1" style="display: inline"></h1>
+          <script type="text/javascript">
+          setInterval('showClock1()',1000);
+          function showClock1() {
+          var Now = new Date();
+          var hh = set0( Now.getHours() );
+          var mm = set0( Now.getMinutes() );
+          var ss = set0( Now.getSeconds() );
+          var RTime1 = ' ' + hh + ':' + mm + ':' + ss + ' ';
+          document.getElementById("Clock1").innerHTML = RTime1;
+          }
+          function set0(num) {
+          var ret;
+          if( num < 10 ) { ret = "0" + num; }
+          else { ret = num; }
+          return ret;
+          }
+          </script>
+    </div>
+
+
     {% block content %}
     {% endblock content %}
 
