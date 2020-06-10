@@ -12,12 +12,19 @@
   </head>
   <body>
     
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">目覚まし時計/Alarm Clock</h1>
+        <p class="lead">無理するなよ^^</p>
+      </div>
+    </div>
+    
     {% block header %}
     {% endblock header %}
 
-    <div class="mx-auto" style="width: 200px;">
+    <div class="text-center">
     
-      <h1 id="Clock1" style="display: inline"></h1>
+      <h2 id="Clock1" style="display: inline"></h2>
           <script type="text/javascript">
           setInterval('showClock1()',1000);
           function showClock1() {
